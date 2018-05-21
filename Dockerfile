@@ -31,6 +31,7 @@ RUN sed -i "s/jiradbpassword/"$jiradbpasswordarg"/g" /home/ec2-user/jira_home/db
 # Provide execution permission
 RUN chmod +x /jira-installation/atlassian-jira-software-7.3.4-standalone/bin/start-jira.sh
 RUN chmod +x /jira-installation/atlassian-jira-software-7.3.4-standalone/bin/check-java.sh
+RUN /jira-installation/atlassian-jira-software-7.3.4-standalone/bin/check-java.sh
 RUN chmod +x /jira-installation/atlassian-jira-software-7.3.4-standalone/bin/catalina.sh
 RUN chmod 755 /jira-installation/atlassian-jira-software-7.3.4-standalone/bin/start-jira.sh
 #RUN useradd --create-home --comment "Account for running JIRA" --shell /bin/bash jira
